@@ -1,0 +1,39 @@
+<nav
+  class="navbar navbar-expand-sm pt-2 pb-2 navbar-dark bg-primary text-white fixed-top"
+>
+  <!-- Brand/logo -->
+  <a class="navbar-brand ml-4" routerLink="/home">
+    <img
+      src="assets/images/flipkart-plus_4ee2f9.png"
+      alt="logo"
+      style="width:90px;"
+    />
+  </a>
+
+  <form class="form-inline" action="#">
+    <input
+      class="form-control mr-sm-2"
+      type="text"
+      placeholder="Search for products"
+      style="width: 500px; text-align: center;"
+    />
+    <i class="material-icons search-icon">search</i>
+  </form>
+  <!-------Unordered list--->
+  <ul class="navbar-nav ml-auto">
+    <a routerLink="/home">
+      <li class="nav-item">Home</li>
+    </a>
+    <a href="#">
+      <li class="nav-item">Menu</li>
+    </a>
+    <a routerLink="/user-cart">
+      <li class="nav-item">
+        <div class="cart-image">
+          <i class="material-icons icon-color">shopping_cart</i
+          ><sup class="hello" *ngIf="cart_value > 0">{{ cart_value }}</sup>
+        </div>
+      </li>
+    </a>
+  </ul>
+</nav>

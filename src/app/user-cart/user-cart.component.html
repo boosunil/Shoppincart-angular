@@ -1,0 +1,58 @@
+<div *ngFor="let item of cart_list">
+  <div class="container shadow-sm" style="margin-top: 100px;">
+    <div class="row ml-5">
+      <div class="col-md-1" style="text-align: center;">
+        <img
+          [src]="item['image']"
+          style="height: 80px;"
+          width="auto"
+          alt="headphone"
+        />
+      </div>
+
+      <div class="col-md-4">
+        <p style="margin-left: 30px;">
+          {{ item["item_name"] }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row shadow-sm">
+      <div class="col-sm-1">
+        <div class="dropdown">
+          <button
+            type="button"
+            class="btn btn-light dropdown-toggle"
+            data-toggle="dropdown"
+            style="margin-left: 70px;"
+          >
+            Qty
+          </button>
+          <div class="dropdown-menu">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5+</li>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-1 text-center " style="margin-left: 100px;">
+        <button class="hello">Save to later</button>
+      </div>
+      <div class="col-sm-1 text-center " style="margin-left: 100px;">
+        <input type="text" style="width: 80px;" />
+      </div>
+      <div class="col-sm-1 text-center " style="margin-left: 100px;">
+        <button class="hello" (click)="removeFromCart(item)">
+          Remove
+        </button>
+      </div>
+      <div class="col-sm-1 text-center " style="margin-left: 100px;">
+        <button class="hello">Place Order</button>
+      </div>
+    </div>
+  </div>
+</div>
